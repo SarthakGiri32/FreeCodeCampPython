@@ -1,6 +1,7 @@
 full_dot = '●'
 empty_dot = '○'
 
+
 def create_character(character_name, strength, intelligence, charisma):
 
     if not isinstance(character_name, str):
@@ -9,7 +10,7 @@ def create_character(character_name, strength, intelligence, charisma):
         return "The character should have a name"
     elif len(character_name) > 10:
         return "The character name is too long"
-    elif character_name.find(" ") != -1:
+    elif " " in character_name:
         return "The character name should not contain spaces"
 
     if (not isinstance(strength, int)) or (not isinstance(intelligence, int)) or (not isinstance(charisma, int)):
@@ -27,5 +28,6 @@ STR {full_dot * strength}{empty_dot * (10 - strength)}
 INT {full_dot * intelligence}{empty_dot * (10 - intelligence)}
 CHA {full_dot * charisma}{empty_dot * (10 - charisma)}
     """
+
 
 print(create_character('ren', 4, 2, 1))
