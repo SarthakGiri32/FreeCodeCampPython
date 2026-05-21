@@ -1,4 +1,11 @@
 def pin_extractor(poems):
+    """
+    This function returns a list of secret codes, where the nth digit is the length of the nth word in the
+    nth line of a poem in the list of poems (zero-indexed n). If the number of words in the nth line is
+    less than or equal to n, then zero is appended to the secret code for that line.
+    :param poems: a list of poems
+    :return: a list of secret codes extracted from each poem
+    """
     secret_codes = []
     for poem in poems:
         secret_code = ""
