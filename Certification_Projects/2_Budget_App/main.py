@@ -67,7 +67,7 @@ def create_spend_chart(categories: list[Category]):
     x_axis_titles = ""
     category_names = [category.name for category in categories]
     for letters in zip_longest(*category_names, fillvalue=" "):
-        x_axis_titles += "     " + "  ".join(letters) + "\n"
+        x_axis_titles += "     " + "  ".join(letters) + "  " + "\n"
     chart += x_axis_titles.rstrip("\n")
 
     return chart
