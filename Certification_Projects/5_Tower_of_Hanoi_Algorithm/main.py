@@ -19,8 +19,7 @@ def hanoi_solver(disk_count: int) -> str:
         "tower3": []
     }
 
-    solution_steps = f"{str(tower_dictionary['tower1'])} {str(tower_dictionary['tower2'])} {str(tower_dictionary['tower3'])}\n{hanoi_recursive_algorithm(disk_count, tower_dictionary, 'tower1', 'tower3', 'tower2').rstrip('\n')}"
-    return solution_steps
+    return f"{str(tower_dictionary['tower1'])} {str(tower_dictionary['tower2'])} {str(tower_dictionary['tower3'])}\n{hanoi_recursive_algorithm(disk_count, tower_dictionary, 'tower1', 'tower3', 'tower2').rstrip('\n')}"
 
 
 def main() -> None:
